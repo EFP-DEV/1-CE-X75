@@ -1,0 +1,184 @@
+Cours 1:
+
+    Présentation du cahier de charges et introduction à LAMP
+    Élection du projet par les étudiants
+
+
+Cours 2:
+
+    Analyse du marché et identification des besoins utilisateurs
+    Conception de la charte graphique
+
+    Début du wireframe:
+        - home
+        - resultats de recherche
+        - page individuelle
+        - page catalogue
+        - contact
+
+Cours 3:
+    Validation wireframe
+    Création de la maquette (se calquer sur le wireframe)
+
+Cours 4:
+
+    Validation maquette
+    Intégration en prototype HTML/CSS/JS
+
+Cours 5:
+
+    Intégration prototype
+
+Cours 6:
+
+    Présentation des projets et évaluation
+    Conclusion et rétroaction sur le processus de développement
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Plan de l'Atelier de Développement Web</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .cours { margin-bottom: 20px; }
+        h1, h2 { color: #333; }
+        ul { list-style-type: none; }
+        li { margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+
+<div class="cours">
+    <h1>Cours 1: Présentation et Fondamentaux</h1>
+
+    <strong>1ere heure:</strong>
+    <ul>
+        <li>Présentation du cahier de charges</li>
+        <li>Définition des projets individuels par les apprenants</li>
+    
+    </ul>
+
+    <strong>2e heure:</strong>
+
+    <ul>
+        <li>Demarrage du wireframe: home, résultats de recherche, page individuelle, page catalogue, contact</li>
+    </ul>
+</div>
+
+<div class="cours">
+    <h1>Cours 2: Planification et Conception</h1>
+    <ul>
+        <li>Analyse du marché et identification des besoins utilisateurs</li>
+        <li>Conception de la charte graphique</li>
+        <li>Début du wireframe: home, résultats de recherche, page individuelle, page catalogue, contact</li>
+    </ul>
+</div>
+
+<div class="cours">
+    <h1>Cours 3: De la Conception à la Maquette</h1>
+    <ul>
+        <li>Validation wireframe</li>
+        <li>Création de la maquette (se calquer sur le wireframe)</li>
+    </ul>
+</div>
+
+<div class="cours">
+    <h1>Cours 4: Développement Frontend</h1>
+    <ul>
+        <li>Validation maquette</li>
+        <li>Intégration en prototype HTML/CSS/JS</li>
+    </ul>
+</div>
+
+<div class="cours">
+    <h1>Cours 5: Intégration et Test</h1>
+    <ul>
+        <li>Intégration prototype</li>
+        <li>Ajout: Introduction aux tests utilisateur pour assurer une UX de qualité</li>
+    </ul>
+</div>
+
+<div class="cours">
+    <h1>Cours 6: Présentation et Feedback</h1>
+    <ul>
+        <li>Présentation des projets et évaluation</li>
+        <li>Conclusion et rétroaction sur le processus de développement</li>
+        <li>Ajout: Session de debriefing pour partager les expériences et les apprentissages</li>
+    </ul>
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

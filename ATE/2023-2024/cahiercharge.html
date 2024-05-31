@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cahier des charges - Application Web</title>
+    <link rel="stylesheet" href="wks-adb.css">
+</head>
+
+<body>
+
+<header>
+    <img src="https://www.efp.be/efp/themes/images/2023/logo_without_baseline-color.png" alt="Brand Logo">
+</header>
+    
+
+    <h1>Cahier des charges - Workshop & Atelier 2024</h1>
+    <section>
+        <h2>1. Introduction</h2>
+        <p>L'objectif de ce cahier des charges est de définir les spécifications pour le développement d'une application
+            web par des étudiants. L'application sera développée en utilisant les technologies suivantes : PHP pour le
+            backend, SQL pour la gestion de la base de données, et HTML, CSS et JavaScript pour le frontend.</p>
+    </section>
+    <section>
+        <h2>2. Objectifs du projet</h2>
+        <p>L'objectif de ce projet est de :</p>
+        <ul>
+            <li>Développer une application web fonctionnelle répondant à un besoin spécifique.</li>
+            <li>Mettre en pratique les concepts appris en cours de développement web.</li>
+            <li>Améliorer les compétences en programmation frontend et backend.</li>
+        </ul>
+    </section>
+    <section>
+        <h2>3. Fonctionnalités de l'application</h2>
+        <p>L'application devra inclure les fonctionnalités suivantes :</p>
+        <ul>
+            <li>Identification des utilisateurs avec gestion des comptes.</li>
+            <li>Interface utilisateur conviviale et responsive.</li>
+            <li>Gestion de contenu dynamique avec des opérations CRUD (Create, Read, Update, Delete).</li>
+            <li>Intégration de formulaires interactifs avec validation côté client et côté serveur.</li>
+            <li>Gestion de sessions pour maintenir l'état de l'utilisateur.</li>
+        </ul>
+
+        <p>Plus précisément</p>
+        <ul>
+            <li>Le site est consultable publiquement.</li>
+            <li>Les utilisateurs pourront s'inscrire et se connecter pour ajouter des items à leur liste de favoris.</li>
+            <li>Les items pourront être notés par les utilisateurs.</li>
+            <li>Les utilisateurs pourront également laisser des commentaires sur les items.</li>
+            <li>Les items pourront être recherchés par thème, type et tags.</li>
+        </ul>
+
+        <p>Plus précisement, ces composants, pages et contenus seront mis en oeuvre</p>
+        <h3>3.1. Pages</h3>
+        <ul>
+            <li>Page d'accueil</li>
+            <li>Page "catalogue" (liste de ???)</li>
+            <li>Page détail d'un élément</li>
+            <li>Liste de résultats</li>
+        </ul>
+
+        <h3>3.2. Formulaires</h3>
+        <p>Utilisation des champs de texte (nom, email, etc.), cases à cocher et boutons radio, listes déroulantes et boutons.</p>
+        <ul>
+            <li>Formulaire de connexion</li>
+            <li>Formulaire d'inscription</li>
+            <li>Formulaire de recherche (simple et avancée)</li>
+            <li>Formulaire de contact</li>
+        </ul>
+
+        <h3>3.3. Navigation</h3>
+        <ul>
+            <li>Barre de navigation</li>
+            <li>Fil d'Ariane (Breadcrumbs)</li>
+            <li>Pagination</li>
+        </ul>
+
+        <h3>3.4. Contenu</h3>
+        <ul>
+            <li>Carte de contenu</li>
+            <li>Notifications, message, toasts</li>
+            <li>Images</li>
+            <li>Vidéos</li>
+            <li>Cartes (Google Maps)</li>
+            <li>Caroussel</li>
+            <li>Modal/Accordeon</li>
+        </ul>
+
+    </section>
+
+    <section>
+        <h2>4. Architecture de l'application</h2>
+        <p>L'application sera structurée selon une architecture MVC (Model-View-Controller) pour assurer la séparation
+            des préoccupations et faciliter la maintenance. Voici une brève description de chaque composant :</p>
+        <ul>
+            <li>Modèle (Model) : Gère l'accès aux données et effectue les opérations CRUD sur la base de données à
+                l'aide de requêtes SQL.</li>
+            <li>Vue (View) : Responsable de l'affichage des données et de l'interface utilisateur à l'aide de HTML, CSS
+                et JavaScript.</li>
+            <li>Contrôleur (Controller) : Gère les requêtes utilisateur, récupère les données nécessaires auprès du
+                modèle et les transmet à la vue appropriée.</li>
+        </ul>
+
+        <h3>4.1. Base de données</h3>
+        <section>
+            <h4>Généralités</h4>
+            <p>La base de données sera centrée autour d'un élément principal : l'item.</p>
+            <p>Chaque item pourra être associé à un utilisateur, noté par les utilisateurs, commenté par les utilisateurs et
+                catalogué.</p>
+            <p>La nature de l'item est déterminée par l'apprenant, mais il est tenu d'exploiter toutes les techniques et compétences apprises</p>
+
+        </section>
+        <section>
+            <h4>Catalogue</h4>
+            <p>L'item pourra être catalogué en lui associant un thème, un type et des tags.</p>
+            
+            <p>Par exemple:</p>
+
+            <ol>
+                <li>
+                    Pour des vêtements:
+                    <ul>
+                        <li>Thème: "Hiver"</li>
+                        <li>Type: "Pull"</li>
+                        <li>Tags: "laine", "chaud", "confortable"</li>
+                    </ul>
+                </li>
+                <li>
+                    Pour des livres:
+                    <ul>
+                        <li>Thème: "Science-fiction"</li>
+                        <li>Type: "Roman"</li>
+                        <li>Tags: "space opera", "dystopie", "anticipation"</li>
+                    </ul>
+                </li>
+                <li>
+                    Pour des films:
+                    <ul>
+                        <li>Thème: "Comédie"</li>
+                        <li>Type: "Long métrage"</li>
+                        <li>Tags: "humour", "rire", "comique"</li>
+                    </ul>
+                </li>
+                <li>
+                    Pour des jeux vidéos:
+                    <ul>
+                        <li>Thème: "Aventure"</li>
+                        <li>Type: "MMORPG"</li>
+                        <li>Tags: "action", "exploration", "aventure"</li>
+                    </ul>
+                </li>
+                <li>
+                    Pour des recettes de cuisine:
+                    <ul>
+                        <li>Thème: "Italien"</li>
+                        <li>Type: "Plat principal"</li>
+                        <li>Tags: "pâtes", "pizza", "tomate"</li>
+                    </ul>
+                </li>
+                <li>
+                    Pour des produits de beauté:
+                    <ul>
+                        <li>Thème: "Soins du visage"</li>
+                        <li>Type: "Crème"</li>
+                        <li>Tags: "hydratant", "anti-âge", "peau sensible"</li>
+                    </ul>
+                </li>
+            </ol>
+
+        </section>
+    </section>
+
+    <section>
+        <h2>5. Technologies utilisées</h2>
+        <p>L'application utilisera les technologies suivantes :</p>
+        <ul>
+            <li>Backend : PHP pour la logique métier et la communication avec la base de données MySQL.</li>
+            <li>Base de données : MySQL pour le stockage des données.</li>
+            <li>Frontend : HTML5, CSS3 et JavaScript pour la conception de l'interface utilisateur.</li>
+            <li>Frameworks et bibliothèques : Utilisation de frameworks et bibliothèques JavaScript (comme jQuery) pour
+                simplifier le développement frontend.</li>
+        </ul>
+    </section>
+    <section>
+        <h2>6. Exigences de sécurité</h2>
+        <p>L'application devra respecter les bonnes pratiques de sécurité suivantes :</p>
+        <ul>
+            <li>Utilisation de requêtes préparées ou d'ORM pour prévenir les attaques par injection SQL.</li>
+            <li>Validation et échappement des données utilisateur pour prévenir les attaques de type Cross-Site
+                Scripting (XSS).</li>
+            <li>Utilisation de mécanismes d'authentification sécurisés, tels que le hachage des mots de passe et la
+                gestion des sessions.</li>
+        </ul>
+    </section>
+    <section>
+        <h2>7. Interface utilisateur</h2>
+        <p>L'interface utilisateur devra être intuitive, conviviale et responsive, permettant une expérience utilisateur
+            optimale sur tous les appareils (ordinateurs de bureau, tablettes et smartphones).</p>
+    </section>
+    <section>
+        <h2>8. Livrables</h2>
+        <p>À la fin du projet, les livrables suivants seront attendus :</p>
+        <ul>
+            <li>Code source de l'application, correctement commenté et structuré.</li>
+            <li>Documentation technique décrivant l'architecture de l'application, les fonctionnalités implémentées et
+                les instructions d'installation.</li>
+            <li>Documentation utilisateur décrivant l'utilisation de l'application et ses fonctionnalités principales.
+            </li>
+        </ul>
+    </section>
+    <section>
+        <h2>9. Échéancier</h2>
+        <p>L'application devra être développée et livrée selon le calendrier suivant :</p>
+        <ul>
+            <li>Phase de développement : ? semaines</li>
+            <li>Phase de test et de correction : ? semaines</li>
+            <li>Phase de documentation et de finalisation : ? semaines</li>
+        </ul>
+    </section>
+    <section>
+        <h2>10. Révisions et approbations</h2>
+        <p>Ce cahier des charges est sujet à révision et doit être approuvé par toutes les parties prenantes avant le
+            début du projet. Toute modification ultérieure devra être documentée et approuvée par les parties
+            concernées.</p>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+body {
+    max-width: 33em;
+    margin: 0 auto;
+    font-size:1.3rem
+}
+
+h1,
+h2 {
+    font-family: sans-serif;
+}
+
+h1 {
+    margin: 4rem 0;
+    font-weight: 900;
+}
+
+header {
+    margin-bottom: 2rem;
+}
+
+header span {
+    text-align: right;
+    display: block;
+}
+
+h2 {
+    margin: 2rem 0 1rem 0;
+    font-weight: 100;
+}
+
+p {
+    text-align: justify;
+    margin: 0;
+    line-height: 1.4rem
+}
+
+section:not(:first-child) p:not(:nth-child(2)) {
+    text-indent: 1rem;
+
+}
+
+section:first-child p:not(:first-child) {
+    text-indent: 1rem;
+}
+
+
+.inline-heading {
+    margin-top: 2rem;
+}
+
+.inline-heading h2,
+.inline-heading p:nth-child(2) {
+    display: inline;
+}
+
+.inline-heading h2 {
+    padding-right: 1rem;
+}
+
+section:last-child{
+    margin: 4rem 0;
+    text-align:right
+
+}
+
+address span {
+    display: block;
+    text-align: right;
+    font-style: normal
+}
