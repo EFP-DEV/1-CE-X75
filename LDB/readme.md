@@ -91,4 +91,72 @@ CREATE INDEX idx_student_name ON Students(Name);
 - **Primary keys** uniquely identify records, while **foreign keys** establish relationships.
 - **Indexes** improve query performance.
 
-Understanding these fundamental concepts is essential for working with relational databases effectively.
+
+
+# Exercice
+
+# **LDB - Exercices**
+
+## **Tables Simples**
+
+### **Objectif**
+Nous allons modéliser différentes tables afin de se familiariser avec les concepts de **champs (colonnes), nommage et types de données**.
+
+Cet exercice est à la fois une **investigation conceptuelle** et une **modélisation concrète**.
+
+### **Données à Modéliser**
+Vous devez modéliser les données suivantes :
+
+1. **Cinéma** : Films & Acteurs
+2. **Librairie** : Livres & Auteurs
+3. **Blog** : Articles & Éditeurs
+4. **Transport** : Pays & Villes
+5. **Langues** : Toutes les langues du monde
+6. **Magasin en ligne** : Clients & Produits
+7. **Hôpital** : Médecins & Patients
+8. **École** : Étudiants & Cours
+
+---
+
+## **Instructions pour chaque exercice**
+Pour chaque ensemble de données, vous devez :
+
+1. **Nommer les tables**
+2. **Lister les données à stocker**
+3. **Définir chaque champ** :
+   - Nom
+   - Type (**Nombre, Chaîne de caractères, Texte, Date**)
+   - **Obligatoire ou optionnel**
+   - Pour les **chaînes de caractères**, préciser la **taille maximale**
+4. **Déterminer l'identifiant unique** de chaque table (**clé primaire**)
+5. **Créer la table en SQL**
+6. **Exporter les tables dans un fichier SQL**
+
+---
+
+## **Critères d'évaluation**
+Vous serez évalué sur les critères suivants :
+
+- **Exhaustivité** : Votre investigation doit couvrir tous les aspects pertinents.
+- **Cohérence des conventions** : Les noms de champs et tables doivent suivre une convention unique et logique.
+- **Justification des champs optionnels** : L’optionalité doit être expliquée.
+- **Utilisation de sources et standards existants** (si applicable, avec justification).
+- **Fichier SQL exporté** : Doit inclure **votre nom** et le **sujet traité**.
+
+---
+
+## **Structure suggérée pour l'exercice**
+
+| Table | Nom | Commentaire | Identifiant(s) |
+|-------|-----|------------|---------------|
+| Nom de la table | Description de la table | Explication | Clé primaire |
+
+### **Champs**
+| Nom | Type | Longueur | Obligatoire | Commentaire |
+|------|------|---------|------------|------------|
+| Nom du champ | Type de donnée | Taille max | Oui/Non | Explication |
+
+---
+
+Ce format vous aidera à structurer vos exercices et à bien organiser vos tables SQL.
+
