@@ -13,10 +13,10 @@ Une **table** (ou **relation**) est l'élément fondamental d'une base de donné
 Exemple de Table (Données des Étudiants) :
 
 ```plaintext
-| StudentID | Name  | Age | Major            |
-|-----------|-------|-----|------------------|
-| 101       | Alice | 21  | Informatique     |
-| 102       | Bob   | 22  | Mathématiques    |
+| id  | name  | age | major            |
+|-----|-------|-----|------------------|
+| 101 | Alice | 21  | Informatique     |
+| 102 | Bob   | 22  | Mathématiques    |
 ```
 
 ## **3. Schéma : La Structure d'une Base de Données**
@@ -27,8 +27,8 @@ Un **schéma** définit la structure d'une base de données, y compris l'organis
 - **Colonne (Attribut) :** Un champ de données spécifique dans une table qui contient des informations d'un type particulier.
 
 Exemple :
-- Dans la table `Student` ci-dessus, **chaque ligne représente un étudiant différent**.
-- **Les colonnes définissent le type d'information stockée** (par exemple, Nom, Âge, Filière).
+- Dans la table `student` ci-dessus, **chaque ligne représente un étudiant différent**.
+- **Les colonnes définissent le type d'information stockée** (par exemple, `name`, `age`, `major`).
 
 ## **5. Relations Entre les Tables**
 Dans les bases de données relationnelles, des **relations** sont établies entre les tables pour éviter la redondance des données et assurer une gestion efficace des données.
@@ -39,7 +39,7 @@ Dans les bases de données relationnelles, des **relations** sont établies entr
 - **Plusieurs-à-Plusieurs (M:N) :** Plusieurs enregistrements de la Table A peuvent être liés à plusieurs enregistrements de la Table B (nécessite une table de jonction).
 
 Exemple de Relation :
-- Une table `Students` et une table `Enrollments` peuvent être liées en utilisant un **StudentID** comme clé étrangère.
+- Une table `student` et une table `enrollment` peuvent être liées en utilisant un `student_id` comme clé étrangère.
 
 ## **6. Clés dans une Base de Données**
 ### **Clé Primaire**
@@ -47,41 +47,37 @@ Une **Clé Primaire** identifie de manière unique chaque enregistrement dans un
 
 Exemple :
 ```sql
-CREATE TABLE Students (
-    StudentID INT PRIMARY KEY,
-    Name VARCHAR(100),
-    Age INT,
-    Major VARCHAR(50)
+CREATE TABLE student (
+    id INT PRIMARY KEY,
+    name VARCHAR(100),
+    age INT,
+    major VARCHAR(50)
 );
 ```
-- `StudentID` est la **clé primaire** dans cette table.
+- `id` est la **clé primaire** dans cette table.
 
 ### **Clé Étrangère**
 Une **Clé Étrangère** établit une relation entre deux tables en référençant la **Clé Primaire** d'une autre table.
 
 Exemple :
 ```sql
-CREATE TABLE Enrollments (
-    EnrollmentID INT PRIMARY KEY,
-    StudentID INT,
-    CourseID INT,
-    FOREIGN KEY (StudentID) REFERENCES Students(StudentID)
+CREATE TABLE enrollment (
+    id INT PRIMARY KEY,
+    student_id INT,
+    course_id INT,
+    FOREIGN KEY (student_id) REFERENCES student(id)
 );
 ```
-- `StudentID` dans `Enrollments` référence le `StudentID` dans `Students`.
+- `student_id` dans `enrollment` référence le `id` dans `student`.
 
 ## **7. Index pour des Requêtes Plus Rapides**
 Un **index** est une structure de base de données qui améliore la vitesse des opérations de récupération de données. Les index fonctionnent comme une table des matières pour un livre, aidant la base de données à localiser les enregistrements de manière efficace.
 
-### **Types d'Index :**
-- **Index Clusterisé :** Détermine l'ordre physique des données dans une table (chaque table peut en avoir un).
-- **Index Non-Clusterisé :** Crée une structure séparée pour améliorer les performances des requêtes.
-
 Exemple :
 ```sql
-CREATE INDEX idx_student_name ON Students(Name);
+CREATE INDEX idx_student_name ON student(name);
 ```
-- Cet index accélère les recherches d'étudiants par `Name`.
+- Cet index accélère les recherches d'étudiants par `name`.
 
 ## **8. Résumé**
 - Une **base de données** est un système organisé pour stocker et gérer des données.
@@ -100,7 +96,69 @@ Nous allons modéliser différentes tables afin de se familiariser avec les conc
 
 Cet exercice est à la fois une **investigation conceptuelle** et une **modélisation concrète**.
 
-### **Données à Modéliser**
+---
+
+## **Processus de Modélisation d'une Base de Données**
+
+### **1. Comprendre le Domaine d'Application**
+Avant de commencer la modélisation d’une base de données, il est essentiel de comprendre **le contexte réel**. Cela implique :
+- L’identification des **entités principales**.
+- La compréhension des **informations à stocker**.
+- L’analyse des **contraintes métier**.
+
+Exemple : Pour un **site de cinéma**, nous avons besoin d’informations sur les **films**, les **acteurs**, et leurs caractéristiques.
+
+---
+
+### **2. Identification des Entités et des Attributs**
+Chaque **entité** correspond généralement à une **table**. Pour chaque entité, nous devons lister :
+- Les **attributs** pertinents (colonnes).
+- Leur **type de données**.
+- Leur **nécessité** (obligatoire ou optionnel).
+
+Exemple pour un film :
+| Attribut      | Type        | Obligatoire |
+|--------------|------------|------------|
+| id           | INT        | Oui        |
+| title        | VARCHAR(255) | Oui        |
+| year         | INT        | Oui        |
+| genre        | VARCHAR(100) | Non        |
+
+---
+
+### **3. Définition du Schéma de la Base de Données**
+Le **schéma** définit la structure et l’organisation des tables. Il inclut :
+- Les **noms des tables**.
+- Les **relations** entre elles (non incluses ici).
+- Les **contraintes** appliquées sur les colonnes (unicité, valeurs non nulles, etc.).
+
+Exemple de définition SQL :
+```sql
+CREATE TABLE film (
+    id INT PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    year INT NOT NULL,
+    genre VARCHAR(100)
+);
+```
+
+---
+
+### **4. Structuration des Données**
+Une fois les entités définies, nous devons :
+1. **Créer les tables** dans un SGBD (ex: MySQL, PostgreSQL).
+2. **Vérifier l’intégrité des données**.
+3. **Remplir avec des exemples de données** pour tester le modèle.
+
+Exemple d’insertion de données :
+```sql
+INSERT INTO film (id, title, year, genre) 
+VALUES (1, 'Inception', 2010, 'Science-fiction');
+```
+
+---
+
+## **Données à Modéliser**
 Vous devez modéliser les données suivantes :
 
 1. **Cinéma** : Films & Acteurs
@@ -155,4 +213,3 @@ Vous serez évalué sur les critères suivants :
 ---
 
 Ce format vous aidera à structurer vos exercices et à bien organiser vos tables SQL.
-
