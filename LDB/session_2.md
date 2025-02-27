@@ -3,8 +3,8 @@
 ## Identifier les entités
 Les entités sont les objets fondamentaux de votre base de données. Chaque entité représente un concept ou un objet du monde réel qui peut être identifié, classifié et décrit. Une entité deviendra généralement une table dans votre base de données. [would you like to know more?](entity_identification.md)
 
-- [ ] Quels objets ou éléments devez-vous suivre dans votre système?
-- [ ] Pouvez-vous nommer ces éléments avec des noms simples? (Utilisateur, Produit, Commande)
+- [ ] Quels objets, concepts, type de personne devez-vous suivre dans votre système?
+- [ ] Pouvez-vous nommer ces éléments avec des **noms** simples? (Utilisateur, Produit, Commande)
 - [ ] Pourriez-vous expliquer chaque entité en une phrase?
 - [ ] Si vous dessiniez chaque entité comme une boîte, aurait-elle un sens par elle-même?
 
@@ -29,9 +29,9 @@ La vérification des attributs permet d'assurer la qualité de votre modèle. Ce
 ## Relations de base
 Les relations définissent comment vos entités interagissent entre elles. Elles créent des connexions logiques qui reflètent la façon dont les objets du monde réel sont liés, permettant de naviguer entre différentes tables de données.
 
-- [ ] Quelles entités ont besoin de connaître d'autres entités?
+- [ ] Quelles entités ont besoin de connaître d'autres entités? (ex: client et commande)
 - [ ] Pour chaque connexion: est-ce qu'une entité possède plusieurs exemplaires d'une autre, ou juste un?
-- [ ] Avez-vous tracé des lignes entre les entités liées?
+- [ ] Quel verbe peut on utiliser pour exprimer la fonction de la relation ?
 - [ ] Pouvez-vous expliquer chaque relation en une phrase simple? ("Un client passe plusieurs commandes")
 
 ## Vérifications simples
