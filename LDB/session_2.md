@@ -1,6 +1,6 @@
 # Protocole d modélisation de base de données pour débutants
 
-## Identifier les entités
+## 1. Identifier les entités
 Les entités sont les objets fondamentaux de votre base de données. Chaque entité représente un concept ou un objet du monde réel qui peut être identifié, classifié et décrit. Une entité deviendra généralement une table dans votre base de données. [would you like to know more?](entity_identification.md)
 
 - [ ] Quels objets, concepts, type de personne devez-vous suivre dans votre système?
@@ -8,7 +8,7 @@ Les entités sont les objets fondamentaux de votre base de données. Chaque enti
 - [ ] Pourriez-vous expliquer chaque entité en une phrase?
 - [ ] Si vous dessiniez chaque entité comme une boîte, aurait-elle un sens par elle-même?
 
-## Comprendre les attributs
+## 2. Identifier les attributs
 Les attributs sont les caractéristiques qui décrivent chaque entité. Ils deviendront les colonnes de vos tables et doivent être choisis avec soin pour représenter précisément les données que vous souhaitez stocker. 
 
 - [ ] Quelles informations avez-vous besoin de connaître sur chaque entité?
@@ -18,16 +18,15 @@ Les attributs sont les caractéristiques qui décrivent chaque entité. Ils devi
 - [ ] Quel type de données chaque attribut contiendra? (texte, nombre, date) [would you like to know more?](entity_attributes_types.md)
 - [ ] Quels attributes ne peuvent pas etre vides ?
 - [ ] Pourriez-vous trier ou rechercher par attributs importants?
-- [ ] 
 
-## Vérifier vos attributs
+### Vérifier vos attributs
 La vérification des attributs permet d'assurer la qualité de votre modèle. Cette étape vise à éliminer les redondances et à garantir que chaque donnée est stockée de manière optimale.
 
 - [ ] Chaque information est-elle stockée à un seul endroit?
 - [ ] Avez-vous évité de stocker des listes dans un seul champ? [would you like to know more?](entity_NF_atomicity.md)
 - [ ] Tous les attributs décrivent-ils vraiment leur entité?  [would you like to know more?](entity_NF_2.md)
 
-## Relations de base
+## 3. Relations de base
 Les relations définissent comment vos entités interagissent entre elles. Elles créent des connexions logiques qui reflètent la façon dont les objets du monde réel sont liés, permettant de naviguer entre différentes tables de données.
 
 - [ ] Quelles entités ont besoin de connaître d'autres entités? (ex: client et commande)
@@ -35,7 +34,7 @@ Les relations définissent comment vos entités interagissent entre elles. Elles
 - [ ] Quel verbe peut on utiliser pour exprimer la fonction de la relation ?
 - [ ] Pouvez-vous expliquer chaque relation en une phrase simple? ("Un client passe plusieurs commandes")
 
-## Vérifications simples
+## 4. Vérifications simples
 Cette étape consiste à évaluer la cohérence globale de votre modèle. Elle vous permet de confirmer que votre conception répond aux besoins spécifiques de votre application.
 
 - [ ] Votre conception est-elle spécifique à vos besoins, pas un modèle générique?
