@@ -14,7 +14,7 @@ Les attributs sont les caractéristiques qui décrivent chaque entité. Ils devi
 - [ ] Quelles informations avez-vous besoin de connaître sur chaque entité?
 - [ ] Quel(s) attribut(s) identifie(nt) de façon unique chaque enregistrement? (ID)
 - [ ] Quelqu'un pourrait-il remplir tous ces champs avec des données réelles?
-- [ ] Demandez-vous une seule information par attribut? (atomicity, pas de liste) [would you like to know more?](entity_atomicity.md)
+- [ ] Demandez-vous une seule information par attribut? (pas de liste) [would you like to know more?](entity_NF_atomicity.md)
 - [ ] Quel type de données chaque attribut contiendra? (texte, nombre, date) [would you like to know more?](entity_attributes_types.md)
 
 ## Vérifier vos attributs
@@ -22,7 +22,7 @@ La vérification des attributs permet d'assurer la qualité de votre modèle. Ce
 
 - [ ] Chaque information est-elle stockée à un seul endroit?
 - [ ] Avez-vous évité de stocker des listes dans un seul champ?
-- [ ] Tous les attributs décrivent-ils vraiment leur entité? (Ou appartiennent-ils ailleurs?)
+- [ ] Tous les attributs décrivent-ils vraiment leur entité?  [would you like to know more?](entity_NF_atomicity.md)
 - [ ] Avez-vous marqué quels attributs ne peuvent pas être vides?
 - [ ] Pourriez-vous trier ou rechercher par attributs importants?
 
