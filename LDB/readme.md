@@ -4,7 +4,7 @@
 - Présentation des objectifs du module et de l’importance des bases de données relationnelles dans le développement d’applications web.  
 - Panorama historique et place du modèle relationnel dans l’évolution des SGBD.
 - [support](session_1.md)
-- 
+
 **Séance 2 : Concepts fondamentaux du modèle relationnel**  
 - Définition des entités, attributs et relations.  
 - Rôle du modèle relationnel dans la cohérence et l’intégrité des données.
