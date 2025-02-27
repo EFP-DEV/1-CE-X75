@@ -9,13 +9,13 @@ Les entités sont les objets fondamentaux de votre base de données. Chaque enti
 - [ ] Si vous dessiniez chaque entité comme une boîte, aurait-elle un sens par elle-même?
 
 ## Comprendre les attributs
-Les attributs sont les caractéristiques qui décrivent chaque entité. Ils deviendront les colonnes de vos tables et doivent être choisis avec soin pour représenter précisément les données que vous souhaitez stocker. [would you like to know more?](entity_attributes_types.md)
+Les attributs sont les caractéristiques qui décrivent chaque entité. Ils deviendront les colonnes de vos tables et doivent être choisis avec soin pour représenter précisément les données que vous souhaitez stocker. 
 
 - [ ] Quelles informations avez-vous besoin de connaître sur chaque entité?
 - [ ] Quel(s) attribut(s) identifie(nt) de façon unique chaque enregistrement? (ID)
 - [ ] Quelqu'un pourrait-il remplir tous ces champs avec des données réelles?
-- [ ] Demandez-vous une seule information par attribut? (atomicity, pas de liste)
-- [ ] Quel type de données chaque attribut contiendra? (texte, nombre, date)
+- [ ] Demandez-vous une seule information par attribut? (atomicity, pas de liste) [would you like to know more?](entity_atomicity.md)
+- [ ] Quel type de données chaque attribut contiendra? (texte, nombre, date) [would you like to know more?](entity_attributes_types.md)
 
 ## Vérifier vos attributs
 La vérification des attributs permet d'assurer la qualité de votre modèle. Cette étape vise à éliminer les redondances et à garantir que chaque donnée est stockée de manière optimale.
