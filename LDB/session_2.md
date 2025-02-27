@@ -9,7 +9,7 @@ Les entités sont les objets fondamentaux de votre base de données. Chaque enti
 - [ ] Si vous dessiniez chaque entité comme une boîte, aurait-elle un sens par elle-même?
 
 ## Comprendre les attributs
-Les attributs sont les caractéristiques qui décrivent chaque entité. Ils deviendront les colonnes de vos tables et doivent être choisis avec soin pour représenter précisément les données que vous souhaitez stocker.
+Les attributs sont les caractéristiques qui décrivent chaque entité. Ils deviendront les colonnes de vos tables et doivent être choisis avec soin pour représenter précisément les données que vous souhaitez stocker. [would you like to know more?](entity_attributes.md)
 
 - [ ] Quelles informations avez-vous besoin de connaître sur chaque entité?
 - [ ] Quel(s) attribut(s) identifie(nt) de façon unique chaque enregistrement? (ID)
