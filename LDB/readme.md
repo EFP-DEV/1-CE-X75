@@ -3,10 +3,12 @@
 **Séance 1 : Introduction et positionnement**  
 - Présentation des objectifs du module et de l’importance des bases de données relationnelles dans le développement d’applications web.  
 - Panorama historique et place du modèle relationnel dans l’évolution des SGBD.
-
+- [support](session_1.md)
+- 
 **Séance 2 : Concepts fondamentaux du modèle relationnel**  
 - Définition des entités, attributs et relations.  
 - Rôle du modèle relationnel dans la cohérence et l’intégrité des données.
+- [support](session_2.md)
 
 **Séance 3 : Modélisation conceptuelle – Le modèle Entité-Association (E/A)**  
 - Présentation des diagrammes E/A, symboles et conventions de visualisation.  
