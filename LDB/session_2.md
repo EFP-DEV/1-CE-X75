@@ -1,4 +1,4 @@
-# Liste de vérification pour la modélisation de base de données (débutants)
+# Protocole d modélisation de base de données pour débutants
 
 ## Identifier les entités
 Les entités sont les objets fondamentaux de votre base de données. Chaque entité représente un concept ou un objet du monde réel qui peut être identifié, classifié et décrit. Une entité deviendra généralement une table dans votre base de données. [would you like to know more?](entity_identification.md)
@@ -16,15 +16,16 @@ Les attributs sont les caractéristiques qui décrivent chaque entité. Ils devi
 - [ ] Quelqu'un pourrait-il remplir tous ces champs avec des données réelles?
 - [ ] Demandez-vous une seule information par attribut? (pas de liste) [would you like to know more?](entity_NF_atomicity.md)
 - [ ] Quel type de données chaque attribut contiendra? (texte, nombre, date) [would you like to know more?](entity_attributes_types.md)
+- [ ] Quels attributes ne peuvent pas etre vides ?
+- [ ] Pourriez-vous trier ou rechercher par attributs importants?
+- [ ] 
 
 ## Vérifier vos attributs
 La vérification des attributs permet d'assurer la qualité de votre modèle. Cette étape vise à éliminer les redondances et à garantir que chaque donnée est stockée de manière optimale.
 
 - [ ] Chaque information est-elle stockée à un seul endroit?
-- [ ] Avez-vous évité de stocker des listes dans un seul champ?
-- [ ] Tous les attributs décrivent-ils vraiment leur entité?  [would you like to know more?](entity_NF_atomicity.md)
-- [ ] Avez-vous marqué quels attributs ne peuvent pas être vides?
-- [ ] Pourriez-vous trier ou rechercher par attributs importants?
+- [ ] Avez-vous évité de stocker des listes dans un seul champ? [would you like to know more?](entity_NF_atomicity.md)
+- [ ] Tous les attributs décrivent-ils vraiment leur entité?  [would you like to know more?](entity_NF_2.md)
 
 ## Relations de base
 Les relations définissent comment vos entités interagissent entre elles. Elles créent des connexions logiques qui reflètent la façon dont les objets du monde réel sont liés, permettant de naviguer entre différentes tables de données.
