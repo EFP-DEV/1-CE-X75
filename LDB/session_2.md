@@ -1,7 +1,7 @@
 # Liste de vérification pour la modélisation de base de données (débutants)
 
 ## Identifier les entités
-Les entités sont les objets fondamentaux de votre base de données. Chaque entité représente un concept ou un objet du monde réel qui peut être identifié, classifié et décrit. Une entité deviendra généralement une table dans votre base de données.
+Les entités sont les objets fondamentaux de votre base de données. Chaque entité représente un concept ou un objet du monde réel qui peut être identifié, classifié et décrit. Une entité deviendra généralement une table dans votre base de données. [would you like to know more?](entity_identification.md)
 
 - [ ] Quels objets ou éléments devez-vous suivre dans votre système?
 - [ ] Pouvez-vous nommer ces éléments avec des noms simples? (Utilisateur, Produit, Commande)
