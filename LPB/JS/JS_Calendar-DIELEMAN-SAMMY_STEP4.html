@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>JS-Calendar</title>
+    <style type="text/css">
+    	td{border:1px solid black;	padding:1em; text-align:center;}
+      td.today{background-color:red;}
+      textarea{width:100%; height:30em;}
+	</style>
+</head>
+<body>
+
+
+<h1>JS-Calendar</h1>
+<h2>Partie 0 : Générer un &lt;table&gt; pour le mois de janvier</h2>
+<script type="application/javascript">
+  console.log("Début");
+
+  let max_days = 31;
+  let current_day = 1;
+
+
+  document.write("<table><tr>");
+  while(current_day <= max_days)
+  {
+    console.log('current/max : ' + current_day + '/' + max_days);
+  	document.write( "\n<td>" + current_day + "</td>");
+  	current_day = current_day + 1;
+  }
+  document.write("</tr></table>");
+
+
+  console.log("Fin");
+</script>
+
+
+
+<h2>Partie 1 : Générer un &lt;table&gt; sur plusieurs lignes</h2>
+<script type="application/javascript">
+  console.log("Début");
+
+  let max_cols=7, max_lines=5;
+  let cpt_line=1, cpt_col=1;
+  current_day = 1;
+
+
+  document.write("<table><tr>");
+  while(cpt_line <= max_lines)
+  {
+    console.log('cpt_line / cpt_col : ' + cpt_line + ' / ' + cpt_col);
+
+    document.write( "\n<td>" + current_day + "</td>");
+    if(cpt_col % max_cols == 0)
+    {
+      if(cpt_line < max_lines)
+        document.write("</tr>\n<tr>");
+      ++cpt_line;
+    }
+
+    current_day = current_day + 1;
+    ++cpt_col;
+  }
+  document.write("</tr></table>");
+
+
+  console.log("Fin");
+</script>
+
+
+
+<h2>Partie 2 : Générer le mois de janvier</h2>
+<script type="application/javascript">
+  let nombre_jour = 31;
+  current_day = 1;
+
+
+  document.write("<table><tr>");
+  while(nombre_jour > 0)
+  {
+
+  	document.write( "<td>" + current_day + "</td>");
+  	if(current_day % 7 == 0)
+  	{
+  		document.write( "</tr><tr>");
+  	}
+
+  	current_day = current_day + 1;
+  	nombre_jour = nombre_jour - 1;
+  }
+  document.write("</tr></table>");
+
+</script>
+
+
+
+<h2>Partie 3 : Isoler le code dans une fonction</h2>
+<script type="application/javascript">
+  function print_table_month(max_days_in_month)
+  {
+    const days_in_a_week = 7;
+  	current_day = 1
+
+  
+  	document.write("\n<table><tr>");
+
+  	while(max_days_in_month > 0)
+  	{
+
+  		  document.write( "\n\t<td>" + current_day + "</td>");
+
+  		if(current_day % days_in_a_week == 0)
+  		{
+  			document.write( "\n</tr>\n<tr>");
+  		}
+
+  		current_day = current_day + 1;
+  		max_days_in_month = max_days_in_month - 1;
+  	}
+  	document.write("\n</tr></table>");
+  
+  }
+
+  print_table_month(29);
+</script>
+
+
+
+<h2>Partie 4 : Générer les autres mois</h2>
+<script type="application/javascript">
+  let month_max_days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+  let month_names = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Aout", "Septembre", "Octobre", "Novembre", "Décembre"];
+
+  for(i=0; i < month_max_days.length; ++i)
+  {
+  	document.write("<h3>"+month_names[i]+"</h3>");
+  	print_table_month(month_max_days[i]);
+  }
+</script>
+
+<h2>Partie 5 : Afficher le jour courant en rouge</h2>
+<script type="application/javascript">
+    console.log("Début");
+    console.log("Fin");
+
+</script>
+</body>
+</html>
