@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JS-Crypto</title>
+</head>
+<body>
+<h1>JS-Crypto</h1>
+<h2>ouvrir la console (F12)</h2>
+<script src="crypto_lib_PRENOM_NOM.js"></script>
+<script>
+
+var alphabet = 'abcdefghijklmnopqrstuvwxyz';
+var alphabet_upper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+var vowels = ['a', 'e', 'i', 'u', 'o', 'y', 'A', 'E', 'I', 'U', 'O', 'Y'];
+
+
+
+console.group('Partie 1');
+  console.assert(what_are_words_worth());
+console.groupEnd();
+
+
+console.group('Partie 2');
+  console.assert(count_words('Turing believes machines think') === 4);
+  console.assert(count_words('Turinglieswithmen') === 1);
+
+  console.group('Avancé');
+    // console.assert(count_words('Therefore machines do not  think') === 5);
+    // console.assert(count_words('Therefore machines do not  think ') === 5);
+    // console.assert(count_words() === 0);
+    // console.assert(count_words('') === 0);
+    // console.assert(count_words(' ') === 0);
+  console.groupEnd();
+console.groupEnd();
+
+
+console.group('Partie 3');
+  console.assert(count_words_by('Turing believes machines think', 'i') === 5);
+  console.assert(count_words_by('Turingbelievesmachinesthink', 'i') === 5);
+  console.assert(count_words_by('Therefore machines do not think', 'e') === 5);
+  // console.group('Avancé');
+  //   console.assert(count_words_by() === 0);
+  //   console.assert(count_words_by('') === 0);
+  //   console.assert(count_words_by('','') === 0);
+  // console.groupEnd();
+console.groupEnd();
+
+
+console.group('Partie 4');
+  console.assert(count_vowels('Turing believes machines think') === 10);
+  console.assert(count_vowels('Turing lies with men') === 6);
+  console.assert(count_vowels('Therefore machines do not think') === 10);
+
+
+  console.group('Moyen');
+    // console.assert(count_vowels('e') === 1);
+    // console.assert(count_vowels('ee') === 2);
+    // console.assert(count_vowels('e e') === 2);
+    // console.assert(count_vowels('non') === 1);
+    // console.assert(count_vowels('oui') === 3);
+    // console.assert(count_vowels(' oui  ') === 3);
+    // console.assert(count_vowels(' o u i  ') === 3);
+    // console.assert(count_vowels('zrtpmlkjhgfdsqe') === 1);
+    // console.assert(count_vowels('ezrtpmlkjhgfdsq') === 1);
+    // console.assert(count_vowels('ezrtpmlkjhgfdsqe') === 2);
+  console.groupEnd();
+
+  console.group('Avancé');
+    // console.assert(count_vowels() === 0);
+    // console.assert(count_vowels('') === 0);
+    // console.assert(count_vowels('   ') === 0);
+
+  console.groupEnd();
+console.groupEnd();
+
+
+console.group('Partie 5');
+  console.assert(count_consonants('Turing believes machines think') === 17);
+  console.assert(count_consonants('Turing lies with men') === 11);
+  console.assert(count_consonants('Therefore machines do not think') === 17);
+  console.assert(count_consonants('aeeiuouyuioz') === 1);
+  console.assert(count_consonants('zaeeiuouyuio') === 1);
+  console.assert(count_consonants('zaeeiuouyuioZ') === 2);
+  console.assert(count_consonants('c') === 1);
+  console.assert(count_consonants('cc') === 2);
+  console.assert(count_consonants('c c') === 2);
+  console.assert(count_consonants('non') === 2);
+  console.assert(count_consonants('oui') === 0);
+  // console.group('Avancé');
+  //   console.assert(count_consonants() === 0);
+  // console.groupEnd();
+console.groupEnd();
+
+
+console.group('Partie 6');
+  console.assert(remove('Turing believes machines think','z') === 'Turing believes machines think');
+  console.assert(remove('Turing believes machines think','e') === 'Turing blivs machins think');
+  console.assert(remove('Turing lies with men', 'i') === 'Turng les wth men');
+  console.assert(remove('Therefore machines do not think', ' ') === 'Thereforemachinesdonotthink');
+  console.assert(remove('aeeiuouyuioz', 'o') === 'aeeiuuyuiz');
+  console.assert(remove('', '') === '');
+  console.assert(remove('    ', ' ') === '');
+  console.assert(remove('ccccc', 'c') === '');
+  console.assert(remove('c c c c c', 'c') === '    ');
+console.groupEnd();
+
+
+console.group('Partie 7');
+  console.assert(remove_strings('Turing believes machines think','z') === 'Turing believes machines think');
+  console.assert(remove_strings('Turing believes machines think','e') === 'Turing blivs machins think');
+  console.assert(remove_strings('Turing lies with men', 'i') === 'Turng les wth men');
+  console.assert(remove_strings('Therefore machines do not think', ' ') === 'Thereforemachinesdonotthink');
+  console.assert(remove_strings('aeeiuouyuioz', 'o') === 'aeeiuuyuiz');
+  console.assert(remove_strings('', '') === '');
+  console.assert(remove_strings('    ', ' ') === '');
+  console.assert(remove_strings('ccccc', 'c') === '');
+  console.assert(remove_strings('c c c c c', 'c') === '    ');
+
+  console.assert(remove_strings('Turing believes machines think','dumber') === 'Ting livs achins think');
+  console.assert(remove_strings('Turing lies with men', 'good people read good books') === 'Tuiniwithmn');
+  console.assert(remove_strings('Therefore machines do not think', 'dumber') === 'Thfo achins o not think');
+  console.assert(remove_strings('aeeiuouyuioz', 'aeeiuuyuiz') === 'oo');
+  console.assert(remove_strings('', '') === '');
+  console.assert(remove_strings('    ', ' ') === '');
+  console.assert(remove_strings('ccccc', 'c') === '');
+  console.assert(remove_strings('c c c c c', 'c c') === '');
+console.groupEnd();
+
+
+console.group('Partie 8');
+  console.assert(crypto('turing believes machines think',1) === 'uvsjoh cfmjfwft nbdijoft uijol');
+  console.assert(crypto('turing believes machines think',2) === 'vwtkpi dgnkgxgu ocejkpgu vjkpm');
+  console.assert(crypto('turing believes machines think',3) === 'wxulqj eholhyhv pdfklqhv wklqn');
+  console.assert(crypto('turing believes machines think',11) === 'efctyr mpwtpgpd xlnstypd estyv');
+  console.assert(crypto('turing believes machines think',22) === 'pqnejc xahearao iwydejao pdejg');
+  console.assert(crypto('turing believes machines think',25) === 'stqhmf adkhdudr lzbghmdr sghmj');
+  console.assert(crypto('turing believes machines think',26) === 'turing believes machines think');
+  console.assert(crypto('turing believes machines think',27) === 'uvsjoh cfmjfwft nbdijoft uijol');
+  // console.group('Avancé');
+  //   console.assert(crypto('Turing believes machines think',1) === 'Uvsjoh cfmjfwft nbdijoft uijol');
+  //   console.assert(crypto('Turing believes machines think',2) === 'Vwtkpi dgnkgxgu ocejkpgu vjkpm');
+  //   console.assert(crypto('Turing believes machines think',3) === 'Wxulqj eholhyhv pdfklqhv wklqn');
+  //   console.assert(crypto('Turing believes machines think',11) === 'Efctyr mpwtpgpd xlnstypd estyv');
+  //   console.assert(crypto('Turing believes machines think',22) === 'Pqnejc xahearao iwydejao pdejg');
+  //   console.assert(crypto('Turing believes machines think',25) === 'Stqhmf adkhdudr lzbghmdr sghmj');
+  //   console.assert(crypto('Turing believes machines think',26) === 'Turing believes machines think');
+  //   console.assert(crypto('Turing believes machines think',27) === 'Uvsjoh cfmjfwft nbdijoft uijol');
+  // console.groupEnd();
+console.groupEnd();
+
+
+console.group('Partie 9');
+  console.assert(decrypt('uvsjoh cfmjfwft nbdijoft uijol',1) === 'turing believes machines think');
+  console.assert(decrypt('uvsjoh cfmjfwft nbdijoft uijol',27) === 'turing believes machines think');
+  console.assert(decrypt('vwtkpi dgnkgxgu ocejkpgu vjkpm',2) === 'turing believes machines think');
+  console.assert(decrypt('wxulqj eholhyhv pdfklqhv wklqn',3) === 'turing believes machines think');
+  console.assert(decrypt('efctyr mpwtpgpd xlnstypd estyv',11) === 'turing believes machines think');
+  console.assert(decrypt('pqnejc xahearao iwydejao pdejg',22) === 'turing believes machines think');
+  console.assert(decrypt('stqhmf adkhdudr lzbghmdr sghmj',25) === 'turing believes machines think');
+  console.assert(decrypt('turing believes machines think',26) === 'turing believes machines think');
+  console.group('Avancé');
+    console.assert(decrypt('Uvsjoh cfmjfwft nbdijoft uijol',1) === 'Turing believes machines think');
+    console.assert(decrypt('Uvsjoh cfmjfwft nbdijoft uijol',27) === 'Turing believes machines think');
+    console.assert(decrypt('Vwtkpi dgnkgxgu ocejkpgu vjkpm',2) === 'Turing believes machines think');
+    console.assert(decrypt('Wxulqj eholhyhv pdfklqhv wklqn',3) === 'Turing believes machines think');
+    console.assert(decrypt('Efctyr mpwtpgpd xlnstypd estyv',11) === 'Turing believes machines think');
+    console.assert(decrypt('Pqnejc xahearao iwydejao pdejg',22) === 'Turing believes machines think');
+    console.assert(decrypt('Stqhmf adkhdudr lzbghmdr sghmj',25) === 'Turing believes machines think');
+    console.assert(decrypt('Turing believes machines think',26) === 'Turing believes machines think');
+  console.groupEnd();
+console.groupEnd();
+
+
+console.group('Partie 10');
+  enigma('lzw akgdslwv esf vgwk fgl vwnwdgh sfq aflwddwulmsd hgowj. Al ak fwuwkksjq xgj zae lg tw aeewjkwv af sf wfnajgfewfl gx glzwj ewf, ozgkw lwuzfaimwk zw stkgjtk vmjafy lzw xajkl lowflq qwsjk gx zak daxw. Zw esq lzwf hwjzshk vg s dalldw jwkwsjuz gx zak gof sfv escw s nwjq xwo vakugnwjawk ozauz sjw hskkwv gf lg glzwj ewf. Xjge lzak hgafl gx nawo lzw kwsjuz xgj fwo lwuzfaimwk emkl tw jwysjvwv sk usjjawv gml tq lzw zmesf ugeemfalq sk s ozgdw, jslzwj lzsf tq afvanavmsdk');
+console.groupEnd();
+
+</script>
+</body>
+</html>
